@@ -1,6 +1,8 @@
 .session.vim
 tags
 TAGS
+.gemtags
+.tags
 .sass-cache
 .DS_Store?
 .DS_Store
@@ -11,13 +13,12 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 .netrwhist
-gitignore_dir
 config.codekit
-.vimrc-private
-.gemtags
-.tags
-bin.private
+
+# ----------------
+# Do stuff locally
+# ----------------
 .envrc
 cheatsheet
-*.tags
-Gemfile.lock
+bin.private
+local_only_initializer.rb

@@ -19,6 +19,7 @@ alias vi="vim"
 alias e="vim"
 alias ms="mux start"
 alias reload="exec $SHELL -l"
+alias chx="chmod +x bin.private/* && chmod +x bin.private/*"
 alias rename="massren" # https://github.com/laurent22/massren
 
 # http://www.mfasold.net/blog/2008/11/moving-or-renaming-multiple-files/

@@ -15,6 +15,7 @@ noremap k gk
 noremap J 3j
 noremap K 3k
 nnoremap s :w<cr>
+nnoremap S :sp<cr>
 
 noremap gv `[v`]
 vnoremap < <gv
