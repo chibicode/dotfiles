@@ -54,3 +54,4 @@ set wildmenu
 set wildmode=longest,list
 set wrap linebreak textwidth=0
 set tags+=gems.tags
+set tags+=tags;/

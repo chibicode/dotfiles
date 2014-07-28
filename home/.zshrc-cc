@@ -13,6 +13,7 @@ alias gls='for ref in $(git for-each-ref --count=20 --sort=-committerdate --form
 
 galias () { alias | grep "git $1" --color=never | sort -f | less }
 
+alias rm="nocorrect rm"
 alias r="rails"
 alias vi="vim"
 alias e="vim"

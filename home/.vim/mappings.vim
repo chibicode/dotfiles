@@ -55,7 +55,11 @@ nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>l :call RunLastSpec()<CR>
 nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>q :qall!
-nnoremap <leader>s :call RunNearestSpec()<CR>
+nnoremap <leader>ss :Ag <Space>-G="*"<S-Left><Left>
+nnoremap <leader>sc :Ag <Space>-G="*.(css\|scss)" app<S-Left><S-Left><Left>
+nnoremap <leader>sj :Ag <Space>-G="*.(js\|coffee)" app<S-Left><S-Left><Left>
+nnoremap <leader>sr :Ag <Space>-G="*.(rb\|rake)"<S-Left><Left>
+nnoremap <leader>st :Ag <Space>-G="*_spec.rb" spec<S-Left><S-Left><Left>
+nnoremap <leader>sv :Ag <Space>-G="*.(erb\|slim)" app<S-Left><S-Left><Left>
+nnoremap <leader>t :call RunNearestSpec()<CR>
 nnoremap <leader>r :call RunCurrentSpecFile()<CR>
-nnoremap <leader>T :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) &<cr>
-nnoremap <leader>t :CtrlPTag<cr>
