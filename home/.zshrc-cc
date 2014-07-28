@@ -18,7 +18,7 @@ alias r="rails"
 alias vi="vim"
 alias e="vim"
 alias ms="mux start"
-alias reload="source ~/.zshrc"
+alias reload="exec $SHELL -l"
 alias rename="massren" # https://github.com/laurent22/massren
 
 # http://www.mfasold.net/blog/2008/11/moving-or-renaming-multiple-files/
@@ -44,6 +44,29 @@ export PATH="./bin:$PATH"
 export PATH="./bin.private:$PATH"
 eval "$(direnv hook zsh)"
 export PATH="$(consolidate-path)"
+
+# See: https://github.com/mathiasbynens/dotfiles/blob/master/.exports
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+
+# Prefer US English and use UTF-8
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="${yellow}";
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X";
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto";
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
 if [ -f $HOME/.secrets ]; then
   source $HOME/.secrets

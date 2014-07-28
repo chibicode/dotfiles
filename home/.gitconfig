@@ -42,7 +42,6 @@
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesfile = /Users/shu/.gitignore
   filemode = false
-  editor = /usr/local/bin/subl -n -w
   autocrlf = false
 [diff]
   # Tell git diff to use mnemonic prefixes (index, work tree, commit, object)

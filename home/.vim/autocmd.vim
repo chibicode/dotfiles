@@ -19,6 +19,8 @@ augroup vimrcEx
   au BufWinEnter,BufRead,BufNewFile *.md set ft=markdown
   au BufWinEnter,BufRead,BufNewFile *.slim set ft=slim
 
+  au FileType * autocmd BufWritePre <buffer> StripWhitespace
+
   au FileType slim set commentstring=/\ %s
   au FileType python set sw=4 sts=4 et
 
