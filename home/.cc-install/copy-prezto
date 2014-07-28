@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# cd into current script:
+# http://stackoverflow.com/a/17744637/114157
+current_path=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)/..
+ln -fs $current_path/.zprezto/runcoms/zlogin $current_path/.zlogin
+ln -fs $current_path/.zprezto/runcoms/zlogout $current_path/.zlogout
+ln -fs $current_path/.zprezto/runcoms/zpreztorc $current_path/.zpreztorc
+ln -fs $current_path/.zprezto/runcoms/zprofile $current_path/.zprofile
+ln -fs $current_path/.zprezto/runcoms/zshenv $current_path/.zshenv
+ln -fs $current_path/.zprezto/runcoms/zshrc $current_path/.zshrc

@@ -1,0 +1,49 @@
+function chpwd() { emulate -LR zsh; ls -a; }
+
+alias cb="git-branch-current"
+alias ga="git add --all; gs"
+alias gb="git branch -v"
+alias gd="git diff"
+alias gg="git add --all; gcm"
+alias gdc="git diff --cached"
+alias gp="git push -u origin \$(cb)"
+alias gu="git pull --rebase"
+alias gs="git status"
+alias gls='for ref in $(git for-each-ref --count=20 --sort=-committerdate --format="%(refname)" refs/heads/ ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
+
+galias () { alias | grep "git $1" --color=never | sort -f | less }
+
+alias r="rails"
+alias vi="vim"
+alias e="vim"
+alias ms="mux start"
+alias reload="source ~/.zshrc"
+alias rename="massren" # https://github.com/laurent22/massren
+
+# http://www.mfasold.net/blog/2008/11/moving-or-renaming-multiple-files/
+autoload -U zmv
+alias mmv='noglob zmv -W'
+
+export EDITOR="/usr/local/bin/vim"
+export VISUAL="/usr/local/bin/vim"
+export SHELL="/usr/local/bin/zsh"
+
+export PATH="$PATH:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+export PATH="$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin"
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.bin.private:$PATH"
+export PATH="./bin:$PATH"
+export PATH="./bin.private:$PATH"
+eval "$(direnv hook zsh)"
+export PATH="$(consolidate-path)"
+
+if [ -f $HOME/.secrets ]; then
+  source $HOME/.secrets
+fi

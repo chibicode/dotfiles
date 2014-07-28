@@ -1,0 +1,56 @@
+syntax on
+let mapleader = ","
+runtime macros/matchit.vim
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set binary
+set cmdheight=2
+set complete-=i
+set completeopt=menuone,preview
+set equalalways
+set expandtab
+set fillchars+=stl:\ ,stlnc:\
+set foldmethod=manual
+set hidden
+set history=10000
+set ignorecase
+set incsearch
+set hlsearch
+set infercase
+set laststatus=2
+set lazyredraw
+set nobackup
+set nofoldenable
+set noswapfile
+set nowritebackup
+set number
+set numberwidth=4
+set ruler
+set scrolloff=3
+set shell=/usr/local/bin/zsh
+set shiftwidth=2
+set shortmess=atI
+set showcmd
+set showmatch
+set showtabline=2
+set sidescroll=1
+set sidescrolloff=15
+set smartcase
+set softtabstop=2
+set splitright
+set synmaxcol=1000
+set t_Co=16
+set t_ti= t_te=
+set tabstop=2
+set textwidth=0
+set title
+set ttyfast
+set undodir='/tmp'
+set undofile
+set visualbell
+set whichwrap=b,s,h,l,<,>,[,],~
+set wildmenu
+set wildmode=longest,list
+set wrap linebreak textwidth=0
+set tags+=gems.tags

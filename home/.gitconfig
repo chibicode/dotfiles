@@ -1,0 +1,92 @@
+[user]
+  name = Shu Uesugi
+  email = shu@chibicode.com
+[alias]
+  aa = add --all
+  br = branch -v
+  co = checkout
+  ci = commit
+  cp = cherry-pick
+  switch = !legit switch \"$@\"
+  branches = !legit branches
+  sprout = !legit sprout \"$@\"
+  unpublish = !legit unpublish \"$@\"
+  harvest = !legit harvest \"$@\"
+  sync = !legit sync \"$@\"
+  publish = !legit publish \"$@\"
+  graft = !legit graft \"$@\"
+[apply]
+  whitespace = nowarn
+[branch]
+  # When branching off a remote branch, automatically
+  # let the local branch track the remote branch:
+  autosetupmerge = true
+  autosetuprebase = always
+[color]
+  ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow
+  frag = magenta
+  old = red
+  new = green
+  whitespace = red reverse
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = /Users/shu/.gitignore
+  filemode = false
+  editor = /usr/local/bin/subl -n -w
+  autocrlf = false
+[diff]
+  # Tell git diff to use mnemonic prefixes (index, work tree, commit, object)
+  # instead of the standard a and b notation:
+  mnemonicprefix = true
+  # Allow git diff to do basic rename and copy detection:
+  renames = copies
+  tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[format]
+  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+[interactive]
+  singlekey = true
+[merge]
+  summary = true
+  verbosity = 1
+  tool = Kaleidoscope
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[rerere]
+  # Remember my merges
+  # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
+  enabled = true
+[push]
+  default = simple
+[credential]
+  helper = osxkeychain
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[pull]
+  rebase = true
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[heroku]
+  account = personal

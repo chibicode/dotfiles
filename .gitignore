@@ -1,0 +1,5 @@
+home/.vim/bundle
+.secrets
+.ssh
+.netrc
+.tmuxinator

@@ -1,0 +1,2 @@
+system 'chmod +x ~/.bin/*'
+system 'chmod +x ~/.cc-install/*'

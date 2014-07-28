@@ -1,0 +1,5 @@
+#!/bin/sh
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+chmod +x ~/.vim/bundle/YouCompleteMe/install.sh
+~/.vim/bundle/YouCompleteMe/install.sh
+vim +PluginInstall +qall
