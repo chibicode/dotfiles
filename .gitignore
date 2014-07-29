@@ -1,5 +1,6 @@
 home/.vim/bundle
 .secrets
+secrets.vim
 .ssh
 .netrc
 .tmuxinator

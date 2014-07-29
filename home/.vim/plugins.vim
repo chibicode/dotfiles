@@ -3,7 +3,9 @@ hi link ExtraWhitespace Error
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 let g:ctrlp_switch_buffer = 'e'
-let g:ctrlp_user_command = '/usr/local/bin/ag %s -l --nocolor -g ""'
+" NOTE: If %s is not a directory that already exists, it'll fail, so I can't
+" do something like split %s and pass it to xargs.
+let g:ctrlp_user_command = "/usr/local/bin/ag %s -l --nocolor -g ''"
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:40,results:40'
 let g:ctrlp_map = ''

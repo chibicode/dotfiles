@@ -16,6 +16,8 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'szw/vim-maximizer'
 Plugin 'thinca/vim-visualstar'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
@@ -38,3 +40,4 @@ source ~/.vim/autocmd.vim
 source ~/.vim/functions.vim
 source ~/.vim/plugins.vim
 source ~/.vim/mappings.vim
+source ~/.vim/secrets.vim

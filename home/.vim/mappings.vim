@@ -14,8 +14,11 @@ noremap j gj
 noremap k gk
 noremap J 3j
 noremap K 3k
+nnoremap x "_x
 nnoremap s :w<cr>
 nnoremap S :sp<cr>
+noremap Q :q<cr>
+nnoremap C :call ToggleQuickfix()<cr>
 
 noremap gv `[v`]
 vnoremap < <gv
@@ -47,20 +50,38 @@ nnoremap <c-l> <c-w>l
 let g:user_emmet_leader_key='<c-e>'
 
 nnoremap <space> :NERDTreeToggle<cr>
-nnoremap <leader>a :CtrlP app/
+nnoremap <leader><space> :call RunLastSpec()<CR>
+nnoremap <leader>. :NERDTreeFind<cr>
+nnoremap <leader>a :CtrlP ./app/<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
-nnoremap <leader>c :call ToggleQuickfix()<cr>
-nnoremap <leader>e :CtrlP<cr>
-nnoremap <leader>f :NERDTreeFind<cr>
+nnoremap <leader>c <nop>
+nnoremap <leader>d <nop>
+nnoremap <leader>e :CtrlP .<cr>
+nnoremap <leader>f :CtrlPTag<CR>
+nnoremap <leader>F :silent !ctags -R ./app ./lib ./spec<cr>
+nnoremap <leader>g <nop>
+nnoremap <leader>h <nop>
+nnoremap <leader>i <nop>
+nnoremap <leader>j <nop>
+nnoremap <leader>k <nop>
+nnoremap <leader>l :CtrlP ./lib/<cr>
 nnoremap <leader>m :MaximizerToggle<CR>
-nnoremap <leader>l :call RunLastSpec()<CR>
 nnoremap <leader>n :call RenameFile()<cr>
+nnoremap <leader>o <nop>
+nnoremap <leader>p <nop>
 nnoremap <leader>q :qall!
-nnoremap <leader>ss :Ag <Space>-G="*"<S-Left><Left>
-nnoremap <leader>sc :Ag <Space>-G="*.(css\|scss)" app<S-Left><S-Left><Left>
-nnoremap <leader>sj :Ag <Space>-G="*.(js\|coffee)" app<S-Left><S-Left><Left>
-nnoremap <leader>sr :Ag <Space>-G="*.(rb\|rake)"<S-Left><Left>
-nnoremap <leader>st :Ag <Space>-G="*_spec.rb" spec<S-Left><S-Left><Left>
-nnoremap <leader>sv :Ag <Space>-G="*.(erb\|slim)" app<S-Left><S-Left><Left>
-nnoremap <leader>t :call RunNearestSpec()<CR>
 nnoremap <leader>r :call RunCurrentSpecFile()<CR>
+nnoremap <leader>s :CtrlP ./spec/<CR>
+nnoremap <leader>t :call RunNearestSpec()<CR>
+nnoremap <leader>u <nop>
+nnoremap <leader>v <nop>
+nnoremap <leader>w <nop>
+nnoremap <leader>x <nop>
+nnoremap <leader>y <nop>
+nnoremap <leader>z <nop>
+nnoremap <leader><leader>s :Ag <Space>-G="*"<S-Left><Left>
+nnoremap <leader><leader>c :Ag <Space>-G="*.(css\|scss)" app<S-Left><S-Left><Left>
+nnoremap <leader><leader>j :Ag <Space>-G="*.(js\|coffee)" app<S-Left><S-Left><Left>
+nnoremap <leader><leader>r :Ag <Space>-G="*.(rb\|rake)"<S-Left><Left>
+nnoremap <leader><leader>t :Ag <Space>-G="*_spec.rb" spec<S-Left><S-Left><Left>
+nnoremap <leader><leader>v :Ag <Space>-G="*.(erb\|slim)" app<S-Left><S-Left><Left>

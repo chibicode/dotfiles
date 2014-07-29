@@ -1,3 +1,4 @@
+unsetopt correct_all
 function chpwd() { emulate -LR zsh; ls -a; }
 
 alias cb="git-branch-current"
@@ -19,7 +20,9 @@ alias vi="vim"
 alias e="vim"
 alias ms="mux start"
 alias reload="exec $SHELL -l"
-alias chx="chmod +x bin.private/* && chmod +x bin.private/*"
+alias chmodbin="chmod +x bin/* && chmod +x bin.private/*"
+alias fs="foreman start"
+alias f="fg"
 alias rename="massren" # https://github.com/laurent22/massren
 
 # http://www.mfasold.net/blog/2008/11/moving-or-renaming-multiple-files/
@@ -37,7 +40,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.bin.private:$PATH"
