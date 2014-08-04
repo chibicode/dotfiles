@@ -23,6 +23,7 @@ augroup vimrcEx
 
   au FileType slim set commentstring=/\ %s
   au FileType python set sw=4 sts=4 et
+  au FileType css setlocal iskeyword+=-
 
   if did_filetype()
     finish

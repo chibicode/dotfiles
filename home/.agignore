@@ -1,0 +1,12 @@
+# Rails
+public/assets
+app/assets/images
+app/assets/fonts
+coverage
+log
+tmp
+node_modules
+solr
+
+# Jekyll
+_site

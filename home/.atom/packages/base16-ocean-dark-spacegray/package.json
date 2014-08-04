@@ -1,0 +1,26 @@
+{
+  "name": "base16-ocean-dark-spacegray",
+  "theme": "syntax",
+  "version": "0.6.0",
+  "private": true,
+  "description": "A port of the Spacegray base16 Ocean Theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carloe/spacegray-base16-ocean-dark"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# base16-ocean-spacegray-dark theme\n\nA port of the Spacegray base16-ocean-dark Theme\n\n### To Install:\n`apm install base16-ocean-dark-spacegray`\n\nConverted from the [Sublime Text Version](https://github.com/kkga/spacegray)\n\n![screenshot](https://dl.dropboxusercontent.com/u/8518439/github/base-16-ocean-spacegray.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/carloe/spacegray-base16-ocean-dark/issues"
+  },
+  "homepage": "https://github.com/carloe/spacegray-base16-ocean-dark",
+  "_id": "base16-ocean-dark-spacegray@0.6.0",
+  "dist": {
+    "shasum": "ba737982028741afb73a703eaa5cc29155afcb55"
+  },
+  "_from": "/Users/shu/.atom/.node-gyp/.atom/.apm/base16-ocean-dark-spacegray/0.6.0/package.tgz"
+}

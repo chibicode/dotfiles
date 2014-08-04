@@ -1,0 +1,21 @@
+'exception-reporting':
+  'userId': '3d7d1d60-31eb-c604-d0d5-51b5e19d99fa'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '80716741655dbed84e2c462165bca60345559e44'
+'editor':
+  'fontSize': 14
+  'fontFamily': 'Fantasque Sans Mono'
+  'softWrap': true
+  'showIndentGuide': true
+  'softWrapAtPreferredLineLength': true
+  'preferredLineLength': 100
+'core':
+  'projectHome': '/Users/shu/code'
+  'useReactEditor': true
+  'audioBeep': false
+  'themes': [
+    'spacegray-dark-ui'
+    'base16-ocean-dark-spacegray'
+  ]

@@ -20,7 +20,12 @@ alias vi="vim"
 alias e="vim"
 alias ms="mux start"
 alias reload="exec $SHELL -l"
-alias chmodbin="chmod +x bin/* && chmod +x bin.private/*"
+
+chmodbin() {
+  chmod +x bin/*
+  chmod +x bin.private/*
+}
+
 alias fs="foreman start"
 alias f="fg"
 alias rename="massren" # https://github.com/laurent22/massren
@@ -29,6 +34,8 @@ alias rename="massren" # https://github.com/laurent22/massren
 autoload -U zmv
 alias mmv='noglob zmv -W'
 
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+precmd() { eval "$PROMPT_COMMAND"  }
 export EDITOR="/usr/local/bin/vim"
 export VISUAL="/usr/local/bin/vim"
 export SHELL="/usr/local/bin/zsh"
@@ -55,6 +62,10 @@ export HISTSIZE=32768;
 export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+
+# Fix C Compiler
+export CFLAGS=-Qunused-arguments
+export CPPFLAGS=-Qunused-arguments
 
 # Prefer US English and use UTF-8
 export LANG="en_US.UTF-8";

@@ -1,6 +1,8 @@
 # System wide gemfile
 source 'https://rubygems.org'
 
-gem "ctags"
+gem "gem-ctags"
 gem "tmuxinator"
 gem "homesick"
+gem "github-pages"
+gem "rb-gsl"
