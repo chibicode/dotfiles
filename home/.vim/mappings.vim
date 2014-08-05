@@ -15,9 +15,9 @@ noremap k gk
 noremap J 3j
 noremap K 3k
 nnoremap s :w<cr>
-nmap m <Plug>(easymotion-s1)
-xmap m <Plug>(easymotion-s1)
-omap m <Plug>(easymotion-s1)
+nmap m <Plug>(easymotion-s)
+xmap m <Plug>(easymotion-s)
+omap m <Plug>(easymotion-s)
 nnoremap S :sp<cr>
 noremap Q :q<cr>
 nnoremap C :call ToggleQuickfix()<cr>
@@ -60,6 +60,7 @@ nnoremap <tab>l :bn<cr>
 nnoremap <tab>h :bp<cr>
 nnoremap <tab>q :bp <BAR> bd #<CR>
 nnoremap : :b
+nnoremap <cr> :res +8<cr>
 
 nnoremap <space> :NERDTreeToggle<cr>
 nnoremap <leader>. :NERDTreeFind<cr>

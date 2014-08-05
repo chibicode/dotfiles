@@ -19,6 +19,7 @@ function! RenameFile()
         redraw!
     endif
 endfunction
+command! Rename :call RenameFile()
 
 function! GetBufferList()
   redir =>buflist

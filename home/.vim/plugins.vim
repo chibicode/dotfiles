@@ -2,6 +2,8 @@ hi link ExtraWhitespace Error
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_use_caching = 1
@@ -12,7 +14,7 @@ let g:ctrlp_switch_buffer = 'e'
 let g:ctrlp_user_command = "/usr/local/bin/ag %s -l --nocolor -g ''"
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:20'
+let g:ctrlp_match_window = 'bottom,order:btt,min:20,max:20,results:20'
 let g:ctrlp_map = ''
 let g:ctrlp_prompt_mappings = {
 \ 'ToggleType(1)':        [''],
