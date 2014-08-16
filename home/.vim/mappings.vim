@@ -95,17 +95,6 @@ nnoremap <leader>x <nop>
 vnoremap <leader>y "+y
 nnoremap <leader>z <nop>
 
-" function! SetCtrlPFt(type)
-"   "CtrlPClearCache
-"   let g:ctrlp_user_command = "/usr/local/bin/ag %s -l --nocolor -g '' -G='" . a:type . "'"
-" endfunction
-
-" nnoremap <leader>c :call SetCtrlPFt("*.(css\|scss)")<cr>:CtrlP .<cr>
-" nnoremap <leader>e :call SetCtrlPFt("*")<cr>:CtrlP .<cr>
-" nnoremap <leader>h :call SetCtrlPFt("*.(erb\|slim\|html)")<cr>:CtrlP .<cr>
-" nnoremap <leader>j :call SetCtrlPFt("*.(js\|coffee)")<cr>:CtrlP .<cr>
-" nnoremap <leader>r :call SetCtrlPFt("*.(rb\|rake)")<cr>:CtrlP .<cr>
-
 nnoremap <leader><leader>c :Ag <Space>-G="*.(css\|scss)"<S-Left><Left>
 nnoremap <leader><leader>e :Ag <Space>-G="*"<S-Left><Left>
 nnoremap <leader><leader>h :Ag <Space>-G="*.(erb\|slim\|html)"<S-Left><Left>
