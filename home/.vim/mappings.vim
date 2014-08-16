@@ -15,11 +15,12 @@ noremap k gk
 noremap J 3j
 noremap K 3k
 nnoremap s :w<cr>
-nmap m <Plug>(easymotion-s)
-xmap m <Plug>(easymotion-s)
-omap m <Plug>(easymotion-s)
+nmap m <Plug>(easymotion-s2)
+xmap m <Plug>(easymotion-s2)
+omap m <Plug>(easymotion-s2)
 nnoremap S :sp<cr>
-noremap Q :q<cr>
+nnoremap R :checktime<cr>
+nnoremap Q :q<cr>
 nnoremap C :call ToggleQuickfix()<cr>
 
 noremap gv `[v`]
@@ -59,35 +60,37 @@ let g:multi_cursor_quit_key='<c-@>'
 nnoremap <tab>l :bn<cr>
 nnoremap <tab>h :bp<cr>
 nnoremap <tab>q :bp <BAR> bd #<CR>
-nnoremap : :b
-nnoremap <cr> :res +8<cr>
+nnoremap <tab><cr> :res +5<cr>
 
 nnoremap <space> :NERDTreeToggle<cr>
 nnoremap <leader>. :NERDTreeFind<cr>
 nnoremap <leader>a <nop>
 nnoremap <leader>b :CtrlPBuffer<cr>
-nnoremap <leader>c :call RunCurrentSpecFile()<CR>
+nnoremap <leader>c :VimuxCloseRunner<cr>
+nnoremap <leader>C :VimuxInspectRunner<cr>
 nnoremap <leader>d <nop>
 nnoremap <leader>e :CtrlP .<cr>
-nnoremap <leader>f :CtrlPTag<CR>
-nnoremap <leader>F :silent !ctags -R ./app ./lib ./spec<cr>
+nnoremap <leader>E :CtrlPMRU<cr>
+nnoremap <leader>f <nop>
 nnoremap <leader>g <nop>
-" nnoremap <leader>h CtrlP
+nnoremap <leader>h <nop>
 nnoremap <leader>i <nop>
-" nnoremap <leader>j CtrlP
+nnoremap <leader>j <nop>
 nnoremap <leader>k <nop>
 nnoremap <leader>l <nop>
 nnoremap <leader>m :MaximizerToggle<CR>
-nnoremap <leader>n :call RunNearestSpec()<cr>
+nnoremap <leader>n <nop>
 nnoremap <leader>o <nop>
 noremap  <leader>p <nop>
 nnoremap <leader>q :qall!
-nnoremap <leader>r :call RunLastSpec()<CR>
+nnoremap <leader>r :VroomRunTestFile<cr>
+nnoremap <leader>R :VroomRunNearestTest<cr>
 nnoremap <leader>s <nop>
-nnoremap <leader>t <nop>
+nnoremap <leader>t :tjump<space>
+nnoremap <leader>T :TagsGenerate
 nnoremap <leader>u <nop>
 nnoremap <leader>v "+p
-nnoremap <leader>w <nop>
+nnoremap <leader>w :call WindowSwap#EasyWindowSwap()<CR>
 nnoremap <leader>x <nop>
 vnoremap <leader>y "+y
 nnoremap <leader>z <nop>

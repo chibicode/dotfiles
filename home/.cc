@@ -20,6 +20,7 @@ alias vi="vim"
 alias e="vim"
 alias ms="mux start"
 alias reload="exec $SHELL -l"
+alias takeover="tmux detach -a"
 
 chmodbin() {
   chmod +x bin/*
@@ -54,7 +55,7 @@ export PATH="$HOME/.bin.private:$PATH"
 export PATH="./bin:$PATH"
 export PATH="./bin.private:$PATH"
 eval "$(direnv hook zsh)"
-export PATH="$(consolidate-path)"
+# export PATH="$(consolidate-path)"
 
 # See: https://github.com/mathiasbynens/dotfiles/blob/master/.exports
 # Larger bash history (allow 32³ entries; default is 500)

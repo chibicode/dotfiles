@@ -21,3 +21,5 @@
 ".editor:not(.mini)":
   "ctrl-e": "editor:move-to-end-of-line"
   "ctrl-shift-m": "markdown-preview:toggle"
+".workspace":
+  "alt-cmd-r": "browser-refresh:open"

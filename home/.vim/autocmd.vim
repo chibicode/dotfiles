@@ -10,6 +10,18 @@ augroup vimrcEx
   " Fugitive - remove when done
   au BufReadPost fugitive://* set bufhidden=delete
 
+  au WinEnter    * checktime
+  au CursorHold  * checktime
+  au InsertEnter * checktime
+  au CmdwinEnter * let b:ei_save = &eventignore
+                   \ | set eventignore=CursorHold,InsertEnter
+  au CmdwinLeave * let &eventignore = b:ei_save
+
+  " wrap lines in quickfix buffer, so that error messages won't get lost on
+  " off-screen
+  autocmd BufEnter    * if &buftype == 'quickfix' | setlocal wrap | endif
+  autocmd BufWinEnter * if &buftype == 'quickfix' | setlocal wrap | endif
+
   au BufWinEnter,BufRead,BufNewFile Gemfile set ft=ruby
   au BufWinEnter,BufRead,BufNewFile Rakefile set ft=ruby
   au BufWinEnter,BufRead,BufNewFile Guardfile set ft=ruby
@@ -22,6 +34,7 @@ augroup vimrcEx
   au FileType * autocmd BufWritePre <buffer> StripWhitespace
 
   au FileType slim set commentstring=/\ %s
+  au FileType slim set omnifunc=rubycomplete#Complete
   au FileType python set sw=4 sts=4 et
   au FileType css setlocal iskeyword+=-
 

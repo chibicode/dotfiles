@@ -4,3 +4,4 @@ secrets.vim
 .ssh
 .netrc
 .tmuxinator
+home/.atom/packages

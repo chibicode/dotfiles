@@ -16,6 +16,6 @@
   'useReactEditor': true
   'audioBeep': false
   'themes': [
-    'spacegray-dark-ui'
-    'base16-ocean-dark-spacegray'
+    'solarized-dark-ui'
+    'solarized-dark-syntax'
   ]

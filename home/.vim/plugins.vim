@@ -1,10 +1,13 @@
 hi link ExtraWhitespace Error
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+hi link EasyMotionTarget IncSearch
+hi link EasyMotionShade  Comment
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 0
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+let g:ctrlp_lazy_update = 10
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_use_caching = 1
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
@@ -49,7 +52,7 @@ let g:surround_61 = "<%= \r %>"
 " Key: "``"
 let g:surround_33 = "```\r```"
 
-let g:rspec_command = "Dispatch rspec {spec}"
+let g:rspec_command = "Dispatch bin/rspec {spec}"
 let g:rspec_runner = "os_x_iterm"
 
 let g:agprg="/usr/local/bin/ag --nogroup --column"
@@ -60,3 +63,22 @@ let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_upper = 1
 let g:EasyMotion_enter_jump_first = 1
 let g:EasyMotion_keys = ';HKLYUIOPNM,QWERTASDGZXCVBJF'
+
+let g:windowswap_map_keys = 0 "prevent default bindings
+
+" Note - tags are created in under .git directory
+let g:vim_tags_use_vim_dispatch = 1
+let g:vim_tags_ctags_binary="/usr/local/bin/ctags"
+
+let g:rubycomplete_rails=1
+let g:rubycomplete_classes_in_global=1
+let g:rubycomplete_buffer_loading=1
+let g:rubycomplete_include_object=1
+let g:rubycomplete_include_objectspace=1
+
+let g:vroom_use_vimux=1
+let g:vroom_use_bundle_exec=0
+let g:vroom_write_all=1
+let g:vroom_map_keys=0
+let g:vroom_use_colors=1
+let g:vroom_spec_command="rspec --no-profile"
