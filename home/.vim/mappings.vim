@@ -60,11 +60,14 @@ let g:multi_cursor_quit_key='<c-@>'
 nnoremap <tab>l :bn<cr>
 nnoremap <tab>h :bp<cr>
 nnoremap <tab>q :bp <BAR> bd #<CR>
+nnoremap <tab>d :1,1000bd<cr>
 nnoremap <tab><cr> :res +5<cr>
 
 nnoremap <space> :NERDTreeToggle<cr>
 nnoremap <leader>. :NERDTreeFind<cr>
-nnoremap <leader>a <nop>
+nnoremap <leader><space> :MaximizerToggle<CR>
+
+nnoremap <leader>a :silent !atom %<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>c :VimuxCloseRunner<cr>
 nnoremap <leader>C :VimuxInspectRunner<cr>
@@ -78,18 +81,20 @@ nnoremap <leader>i <nop>
 nnoremap <leader>j <nop>
 nnoremap <leader>k <nop>
 nnoremap <leader>l <nop>
-nnoremap <leader>m :MaximizerToggle<CR>
+nnoremap <leader>m :silent !open -a Marked.app %<cr>
 nnoremap <leader>n <nop>
 nnoremap <leader>o <nop>
 noremap  <leader>p <nop>
 nnoremap <leader>q :qall!
 nnoremap <leader>r :VroomRunTestFile<cr>
 nnoremap <leader>R :VroomRunNearestTest<cr>
-nnoremap <leader>s <nop>
+nnoremap <leader>s :Scratch<cr>
+nnoremap <leader>S <c-w>t:q<cr><c-w>p
 nnoremap <leader>t :tjump<space>
 nnoremap <leader>T :TagsGenerate
 nnoremap <leader>u <nop>
-nnoremap <leader>v "+p
+noremap <leader>v "+p
+noremap <leader>V "+P
 nnoremap <leader>w :call WindowSwap#EasyWindowSwap()<CR>
 nnoremap <leader>x <nop>
 vnoremap <leader>y "+y

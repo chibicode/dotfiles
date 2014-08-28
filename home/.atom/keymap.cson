@@ -23,3 +23,5 @@
   "ctrl-shift-m": "markdown-preview:toggle"
 ".workspace":
   "alt-cmd-r": "browser-refresh:open"
+".platform-darwin .editor:not(.mini)":
+  "cmd-shift-e": "find-and-replace:use-selection-as-find-pattern"

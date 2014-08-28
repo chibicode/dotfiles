@@ -82,3 +82,6 @@ let g:vroom_write_all=1
 let g:vroom_map_keys=0
 let g:vroom_use_colors=1
 let g:vroom_spec_command="rspec --no-profile"
+
+let g:scratch_autohide = 0
+let g:scratch_height = 20

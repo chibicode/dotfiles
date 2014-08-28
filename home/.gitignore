@@ -15,6 +15,7 @@ Thumbs.db
 .netrwhist
 config.codekit
 *.dump
+__Scratch__
 
 # ----------------
 # Do stuff locally
